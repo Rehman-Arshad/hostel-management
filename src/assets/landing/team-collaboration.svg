@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0" x2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="grad-avatar1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="grad-avatar2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="grad-avatar3" x1="0" x2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="600" fill="url(#grad-bg)"/>
+
+  <!-- central dashboard card -->
+  <g filter="url(#shadow)">
+    <rect x="180" y="160" width="440" height="280" rx="20" fill="#fff"/>
+    <rect x="200" y="180" width="400" height="240" rx="12" fill="url(#grad-card)" opacity="0.07"/>
+  </g>
+
+  <!-- chart -->
+  <rect x="220" y="240" width="360" height="100" rx="10" fill="#fff" opacity="0.9"/>
+  <rect x="240" y="310" width="40" height="30" rx="6" fill="#6366f1"/>
+  <rect x="290" y="270" width="40" height="70" rx="6" fill="#818cf8"/>
+  <rect x="340" y="250" width="40" height="90" rx="6" fill="#a5b4fc"/>
+  <rect x="390" y="290" width="40" height="50" rx="6" fill="#c7d2fe"/>
+  <rect x="440" y="300" width="40" height="40" rx="6" fill="#e0e7ff"/>
+
+  <!-- title bar -->
+  <rect x="220" y="200" width="160" height="20" rx="10" fill="#6366f1" opacity="0.6"/>
+  <rect x="390" y="200" width="80" height="20" rx="10" fill="#6366f1" opacity="0.3"/>
+
+  <!-- floating avatars (collaborators) -->
+  <g>
+    <!-- left avatar -->
+    <circle cx="150" cy="300" r="40" fill="url(#grad-avatar1)" filter="url(#shadow)"/>
+    <circle cx="150" cy="290" r="18" fill="#fff" opacity="0.9"/>
+    <circle cx="150" cy="288" r="12" fill="#fde68a"/>
+  </g>
+
+  <g>
+    <!-- top avatar -->
+    <circle cx="400" cy="100" r="40" fill="url(#grad-avatar2)" filter="url(#shadow)"/>
+    <circle cx="400" cy="90" r="18" fill="#fff" opacity="0.9"/>
+    <circle cx="400" cy="88" r="12" fill="#a5b4fc"/>
+  </g>
+
+  <g>
+    <!-- right avatar -->
+    <circle cx="650" cy="320" r="40" fill="url(#grad-avatar3)" filter="url(#shadow)"/>
+    <circle cx="650" cy="310" r="18" fill="#fff" opacity="0.9"/>
+    <circle cx="650" cy="308" r="12" fill="#6ee7b7"/>
+  </g>
+
+  <!-- connection lines -->
+  <path d="M190 290 Q400 200 610 310" stroke="#c7d2fe" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M150 320 Q400 350 650 320" stroke="#c7d2fe" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- text -->
+  <text x="400" y="480" text-anchor="middle" font-family="Poppins, sans-serif" font-size="22" fill="#1e293b" font-weight="600">
+    Seamless Collaboration
+  </text>
+  <text x="400" y="505" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#475569">
+    Real-time teamwork between students, wardens, and admins
+  </text>
+</svg>

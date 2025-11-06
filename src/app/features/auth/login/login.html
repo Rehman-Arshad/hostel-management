@@ -1,28 +1,38 @@
-<div class="login-page container">
-  <div class="login-card card">
-    <h2>Hostel Management — Login</h2>
+<div class="login-wrapper">
+  <div class="login-card">
+    <div class="brand">
+      <span class="logo">🏠</span>
+      <h2>Devspark Hostel</h2>
+      <p class="subtitle">Secure Login Portal</p>
+    </div>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <label>Email</label>
-      <input formControlName="email" type="email" placeholder="admin@hostel.com" />
-      @if (form.controls.email.invalid && form.controls.email.touched) {
-        <div class="error">Enter valid email</div>
-      }
+      <div class="input-group">
+        <label>Email</label>
+        <input formControlName="email" type="email" placeholder="admin@hostel.com" />
+        @if (form.controls.email.invalid && form.controls.email.touched) {
+          <div class="error">Enter a valid email</div>
+        }
+      </div>
 
-      <label>Password</label>
-      <input formControlName="password" type="password" placeholder="123" />
-      @if (form.controls.password.invalid && form.controls.password.touched) {
-        <div class="error">Password required</div>
-      }
+      <div class="input-group">
+        <label>Password</label>
+        <input formControlName="password" type="password" placeholder="123" />
+        @if (form.controls.password.invalid && form.controls.password.touched) {
+          <div class="error">Password required</div>
+        }
+      </div>
 
-      <button class="btn" type="submit" [disabled]="form.invalid">Login</button>
+      <button class="btn-login" type="submit" [disabled]="form.invalid">Login</button>
     </form>
 
     <div class="hint">
-      <p><strong>Demo Credentials</strong></p>
-      <p>admin@hostel.com / 123</p>
-      <p>warden@hostel.com / 123</p>
-      <p>student@hostel.com / 123</p>
+      <p><strong>Demo Accounts</strong></p>
+      <div class="creds">
+        <p>👑 Admin → admin@hostel.com / 123</p>
+        <p>🧑‍💼 Warden → warden@hostel.com / 123</p>
+        <p>🎓 Student → student@hostel.com / 123</p>
+      </div>
     </div>
   </div>
 </div>

@@ -13,12 +13,12 @@ import { RoomsList } from './features/rooms/rooms-list/rooms-list';
 import { FeesList } from './features/fees/fees-list/fees-list';
 import { AttendanceList } from './features/attendance/attendance-list/attendance-list';
 import { ComplaintsList } from './features/complaints/complaints-list/complaints-list';
+import { Landing } from './features/landing/landing';
 
 export const routes: Routes = [
+  {path: '', component: Landing},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-
   { path: 'login', component: Login },
-
   {
     path: 'admin',
     component: AdminLayout,
