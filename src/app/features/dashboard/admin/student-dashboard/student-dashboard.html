@@ -1,0 +1,9 @@
+<div class="card">
+      <h3>Welcome, {{ user?.name }}</h3>
+      <p>Your current info</p>
+      <div style="display:flex; gap:1rem; margin-top:1rem;">
+        <div class="card" style="flex:1;"><strong>Room:</strong> {{ student?.roomId }}</div>
+        <div class="card" style="flex:1;"><strong>Fees Due:</strong> {{ student?.feesDue | currency:'USD':true }}</div>
+        <div class="card" style="flex:1;"><strong>Attendance:</strong> {{ student?.attendancePercent }}%</div>
+      </div>
+    </div>

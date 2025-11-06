@@ -1,0 +1,18 @@
+   <div class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3>Students</h3>
+        <button class="btn" (click)="addMock()">Add Student</button>
+      </div>
+
+      <table class="table" style="margin-top:0.75rem;">
+        <thead><tr><th>Name</th><th>Email</th><th>Room</th><th>Fees Due</th></tr></thead>
+        <tbody>
+          <tr *ngFor="let s of students">
+            <td>{{ s.name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.roomId }}</td>
+            <td>{{ s.feesDue | currency:'USD':true }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

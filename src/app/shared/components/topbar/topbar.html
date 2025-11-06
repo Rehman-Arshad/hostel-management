@@ -1,0 +1,9 @@
+ <header class="topbar">
+      <div class="brand">
+        <a routerLink="/">Hostel Management</a>
+      </div>
+      <div class="actions">
+        <span class="user" *ngIf="user">{{ user.name }} • {{ user.role }}</span>
+        <button class="btn-logout" (click)="logout()">Logout</button>
+      </div>
+    </header>

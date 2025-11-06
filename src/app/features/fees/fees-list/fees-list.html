@@ -1,0 +1,13 @@
+  <div class="card">
+      <h3>Fees</h3>
+      <table class="table" style="margin-top:0.6rem;">
+        <thead><tr><th>Student</th><th>Email</th><th>Fees Due</th></tr></thead>
+        <tbody>
+          <tr *ngFor="let s of students">
+            <td>{{ s.name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.feesDue | currency:'USD':true }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+$bg: #F8FAFC;
+$card: #FFFFFF;
+$primary: #3B82F6; // accent blue
+$dark: #0F172A; // dark text
+$muted: #64748B; // muted grey
+$accent-2: #1E293B; // blue-grey
+
+* { box-sizing: border-box; }
+
+html, body, app-root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: $bg;
+  color: $dark;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* small utilities */
+.card {
+  background: $card;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  padding: 1rem;
+}
+
+.topbar {
+  height: 64px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.btn {
+  background: $primary;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight:600;
+}
+.table tr:hover { background: #F1F5F9; }
+
+
+/* responsive helpers */
+@media (max-width: 768px) {
+  .container { padding: 0.75rem; }
+}

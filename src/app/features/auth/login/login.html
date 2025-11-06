@@ -1,0 +1,23 @@
+<div class="login-page container">
+      <div class="login-card card">
+        <h2>Hostel Management — Login</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <label>Email</label>
+          <input formControlName="email" type="email" placeholder="admin@hostel.com" />
+          <div *ngIf="form.controls.email.invalid && form.controls.email.touched" class="error">Enter valid email</div>
+
+          <label>Password</label>
+          <input formControlName="password" type="password" placeholder="123" />
+          <div *ngIf="form.controls.password.invalid && form.controls.password.touched" class="error">Password required</div>
+
+          <button class="btn" type="submit" [disabled]="form.invalid">Login</button>
+        </form>
+
+        <div class="hint">
+          <p><strong>Demo Credentials</strong></p>
+          <p>admin@hostel.com / 123</p>
+          <p>warden@hostel.com / 123</p>
+          <p>student@hostel.com / 123</p>
+        </div>
+      </div>
+    </div>

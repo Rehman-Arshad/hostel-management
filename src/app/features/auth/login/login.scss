@@ -1,0 +1,7 @@
+.login-page { display:flex; justify-content:center; align-items:center; height:100vh; }
+    .login-card { width:420px; padding: 2rem; }
+    input { width:100%; padding:10px; margin:0.4rem 0 1rem 0; border-radius:6px; border:1px solid #E6EEF8; }
+    label { font-weight:600; color:#0F172A; }
+    .btn { display:block; width:100%; padding:10px; background: #3B82F6; color:white; border:none; border-radius: 8px; cursor:pointer; margin-top:0.5rem; }
+    .hint { margin-top:1rem; color: #475569; font-size:0.9rem; }
+    .error { color: #EF4444; font-size:0.85rem; margin-bottom:0.5rem; }
