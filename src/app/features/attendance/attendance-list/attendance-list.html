@@ -1,7 +1,12 @@
 <div class="card">
-      <h3>Attendance</h3>
-      <p>Simple attendance percentages (mocked)</p>
-      <ul>
-        <li *ngFor="let s of students">{{ s.name }} — {{ s.attendancePercent }}%</li>
-      </ul>
-    </div>
+  <h3>Attendance</h3>
+  <p>Simple attendance percentages (mocked)</p>
+
+  <ul>
+    @for (s of students; track s.name) {
+      <li>{{ s.name }} — {{ s.attendancePercent }}%</li>
+    } @empty {
+      <li>No students found</li>
+    }
+  </ul>
+</div>

@@ -1,13 +1,27 @@
-  <div class="card">
-      <h3>Fees</h3>
-      <table class="table" style="margin-top:0.6rem;">
-        <thead><tr><th>Student</th><th>Email</th><th>Fees Due</th></tr></thead>
-        <tbody>
-          <tr *ngFor="let s of students">
-            <td>{{ s.name }}</td>
-            <td>{{ s.email }}</td>
-            <td>{{ s.feesDue | currency:'USD':true }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="card">
+  <h3>Fees</h3>
+  <table class="table" style="margin-top:0.6rem;">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Email</th>
+        <th>Fees Due</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (s of students; track s.email) {
+        <tr>
+          <td>{{ s.name }}</td>
+          <td>{{ s.email }}</td>
+          <td>{{ s.feesDue | currency:'USD':true }}</td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="3" style="text-align:center; color:#999;">
+            No fee records found
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

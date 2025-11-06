@@ -1,16 +1,25 @@
-  <div class="card">
-      <h3>Warden Dashboard</h3>
-      <p>Overview of rooms and attendance (mocked)</p>
-      <div style="display:flex; gap:1rem; margin-top:1rem;">
-        <div style="flex:1;">
-          <h4>Rooms</h4>
-          <ul>
-            <li *ngFor="let r of rooms">{{ r.number }} — {{ r.status }} ({{ r.occupied }}/{{ r.capacity }})</li>
-          </ul>
-        </div>
-        <div style="flex:1;">
-          <h4>Complaints</h4>
-          <p>2 pending complaints</p>
-        </div>
-      </div>
+<div class="card">
+  <h3>Warden Dashboard</h3>
+  <p>Overview of rooms and attendance (mocked)</p>
+
+  <div style="display:flex; gap:1rem; margin-top:1rem;">
+    <div style="flex:1;">
+      <h4>Rooms</h4>
+      <ul>
+        @for (r of rooms; track r.number) {
+          <li>
+            {{ r.number }} — {{ r.status }}
+            ({{ r.occupied }}/{{ r.capacity }})
+          </li>
+        } @empty {
+          <li>No rooms found.</li>
+        }
+      </ul>
     </div>
+
+    <div style="flex:1;">
+      <h4>Complaints</h4>
+      <p>2 pending complaints</p>
+    </div>
+  </div>
+</div>

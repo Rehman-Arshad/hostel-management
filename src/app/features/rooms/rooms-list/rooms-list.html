@@ -1,10 +1,18 @@
- <div class="card">
-      <h3>Rooms</h3>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1rem; margin-top:0.75rem;">
-        <div class="card" *ngFor="let r of rooms">
-          <h4>{{ r.number }}</h4>
-          <p>Capacity: {{ r.capacity }} • Occupied: {{ r.occupied }}</p>
-          <p>Status: <strong>{{ r.status }}</strong></p>
-        </div>
+<div class="card">
+  <h3>Rooms</h3>
+  <div
+    style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1rem; margin-top:0.75rem;">
+    
+    @for (r of rooms; track r.number) {
+      <div class="card">
+        <h4>{{ r.number }}</h4>
+        <p>Capacity: {{ r.capacity }} • Occupied: {{ r.occupied }}</p>
+        <p>Status: <strong>{{ r.status }}</strong></p>
       </div>
-    </div>
+    } @empty {
+      <div class="card" style="text-align:center; color:#999;">
+        No rooms available
+      </div>
+    }
+  </div>
+</div>

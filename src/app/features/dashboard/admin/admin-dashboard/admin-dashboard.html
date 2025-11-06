@@ -1,35 +1,53 @@
-<div class="grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
-      <div class="card stat">
-        <h3>Total Students</h3>
-        <div class="value">{{ totalStudents }}</div>
-      </div>
-      <div class="card stat">
-        <h3>Total Rooms</h3>
-        <div class="value">{{ totalRooms }}</div>
-      </div>
-      <div class="card stat">
-        <h3>Available Rooms</h3>
-        <div class="value">{{ availableRooms }}</div>
-      </div>
-      <div class="card stat">
-        <h3>Pending Complaints</h3>
-        <div class="value">{{ pendingComplaints }}</div>
-      </div>
-    </div>
+<div class="grid"
+     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+  
+  <div class="card stat">
+    <h3>Total Students</h3>
+    <div class="value">{{ totalStudents }}</div>
+  </div>
 
-    <section style="margin-top:1rem;">
-      <div class="card">
-        <h4>Recent Students</h4>
-        <table class="table">
-          <thead><tr><th>Name</th><th>Email</th><th>Room</th><th>Fees Due</th></tr></thead>
-          <tbody>
-            <tr *ngFor="let s of students">
-              <td>{{ s.name }}</td>
-              <td>{{ s.email }}</td>
-              <td>{{ s.roomId }}</td>
-              <td>{{ s.feesDue | currency:'USD':true }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <div class="card stat">
+    <h3>Total Rooms</h3>
+    <div class="value">{{ totalRooms }}</div>
+  </div>
+
+  <div class="card stat">
+    <h3>Available Rooms</h3>
+    <div class="value">{{ availableRooms }}</div>
+  </div>
+
+  <div class="card stat">
+    <h3>Pending Complaints</h3>
+    <div class="value">{{ pendingComplaints }}</div>
+  </div>
+</div>
+
+<section style="margin-top:1rem;">
+  <div class="card">
+    <h4>Recent Students</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Room</th>
+          <th>Fees Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (s of students; track s.email) {
+          <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.roomId }}</td>
+            <td>{{ s.feesDue | currency:'USD':true }}</td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="4" style="text-align:center; color:#999;">No students found</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
