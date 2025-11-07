@@ -10,9 +10,9 @@ export class AuthService {
 
   // mock users
   private users: User[] = [
-    { id: 1, email: 'admin@hostel.com', password: '123', role: 'Admin', name: 'Admin User' },
-    { id: 2, email: 'warden@hostel.com', password: '123', role: 'Warden', name: 'Warden User' },
-    { id: 3, email: 'student@hostel.com', password: '123', role: 'Student', name: 'Student User' }
+    { id: 1, email: 'admin@hostel.com', password: '123456', role: 'Admin', name: 'Admin User' },
+    { id: 2, email: 'warden@hostel.com', password: '123456', role: 'Warden', name: 'Warden User' },
+    { id: 3, email: 'student@hostel.com', password: '123456', role: 'Student', name: 'Student User' }
   ];
 
   constructor(private router: Router) {}

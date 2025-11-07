@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Sidebar } from "./shared/components/sidebar/sidebar";
-import { Topbar } from "./shared/components/topbar/topbar";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Sidebar, Topbar],
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
