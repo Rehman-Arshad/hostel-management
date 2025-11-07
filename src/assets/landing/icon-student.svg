@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Student icon">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="f2" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" rx="10" width="60" height="60" fill="url(#g2)" filter="url(#f2)"/>
+
+  <!-- head -->
+  <circle cx="32" cy="22" r="8" fill="#ffffff" opacity="0.95"/>
+
+  <!-- body -->
+  <path d="M20 44c0-7 6-12 12-12s12 5 12 12v4H20v-4z" fill="#ffffff" opacity="0.95"/>
+
+  <!-- subtle collar -->
+  <path d="M24 36c3-2 6-2 8-2s5 0 8 2" fill="none" stroke="#e6f9f5" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

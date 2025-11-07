@@ -1,0 +1,106 @@
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span>Devspark Hostel</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a routerLink="/login" class="btn-login">Login</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Manage Your Hostel <span class="highlight">Smarter</span> & <span class="highlight">Faster</span></h1>
+      <p>
+        Streamline room management, student records, and payments — all from a single, beautifully designed dashboard.
+      </p>
+      <div class="hero-buttons">
+        <a routerLink="/login" class="btn-primary"> Get Started</a>
+        <a href="#features" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/landing/hero.svg" alt="Hostel dashboard illustration" />
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features container">
+  <h2>Powerful Features</h2>
+  <p class="subtitle">Everything you need to manage your hostel efficiently.</p>
+
+  <div class="grid">
+    <div class="feature">
+      <div class="icon-box">
+        <img src="/assets/landing/icon-rooms.svg" alt="Room Management" />
+      </div>
+      <h3>Room Management</h3>
+      <p>Track availability, occupancy, and capacity with clean visuals.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box">
+        <img src="/assets/landing/icon-student.svg" alt="Student Profiles" />
+      </div>
+      <h3>Student Profiles</h3>
+      <p>Maintain detailed student records and assignments easily.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box">
+        <img src="/assets/landing/icon-fees.svg" alt="Fee Tracking" />
+      </div>
+      <h3>Fee Tracking</h3>
+      <p>Manage payments, dues, and reports effortlessly.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box">
+        <img src="/assets/landing/icon-complaints.svg" alt="Complaints & Support" />
+      </div>
+      <h3>Complaints & Support</h3>
+      <p>Enable students to submit and track complaints instantly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about container">
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Built for <span class="highlight">Students</span>, <span class="highlight">Wardens</span> & <span class="highlight">Admins</span></h2>
+      <p>
+        Devspark Hostel Management simplifies complex operations — bringing transparency, security, and automation across every level of your organization.
+      </p>
+      <a routerLink="/login" class="btn-primary">✨ Try Free Demo</a>
+    </div>
+    <div class="about-image">
+      <img src="/assets/landing/team-collaboration.svg" alt="Team collaboration" />
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>Email us at <a href="mailto:support@devsparkhostel.com">support@devsparkhostel.com</a></p>
+    <p class="social">
+      <a href="#">LinkedIn</a> •
+      <a href="#">YouTube</a> •
+      <a href="#">Twitter</a>
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© {{ currentYear }} <strong>Devspark Hostel</strong>. All rights reserved.</p>
+</footer>

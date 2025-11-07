@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Complaints icon">
+  <defs>
+    <linearGradient id="g4" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="f4" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" rx="10" width="60" height="60" fill="url(#g4)" filter="url(#f4)"/>
+
+  <!-- chat bubble -->
+  <path d="M18 20h28v14a4 4 0 0 1-4 4H28l-6 4v-4H18z" fill="#fff" opacity="0.96" />
+
+  <!-- lines inside bubble -->
+  <rect x="22" y="24" width="18" height="2" rx="1" fill="#e6eefc"/>
+  <rect x="22" y="29" width="12" height="2" rx="1" fill="#e6eefc"/>
+
+  <!-- small badge -->
+  <circle cx="48" cy="18" r="5" fill="#fee2e2"/>
+  <text x="48" y="20.5" text-anchor="middle" font-weight="700" font-size="6" fill="#b91c1c" style="font-family:Inter, Arial, sans-serif;">2</text>
+</svg>

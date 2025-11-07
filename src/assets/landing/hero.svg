@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  hero.svg
+  Modern glossy hero illustration for Devspark Hostel landing page.
+  - scalable vector
+  - gradients, soft shadows, simple characters, dashboard card, building
+  - optimized for web; edit in vector editor if you want to tweak colors
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-label="Hostel dashboard illustration">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f0f7ff"/>
+      <stop offset="1" stop-color="#fbf0ff"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <linearGradient id="softBlue" x1="0" x2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#e9d5ff"/>
+    </linearGradient>
+
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.85)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.55)"/>
+    </linearGradient>
+
+    <linearGradient id="chartGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Shadows / filters -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="30" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+
+    <filter id="softLift" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.07"/>
+    </filter>
+
+    <!-- small inner shadow -->
+    <filter id="inner" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="0" dy="2" />
+      <feGaussianBlur stdDeviation="3" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" />
+    </filter>
+
+    <!-- rounded corner mask -->
+    <clipPath id="roundedRect">
+      <rect x="0" y="0" width="560" height="330" rx="18" ry="18" />
+    </clipPath>
+
+    <!-- subtle grid pattern for building windows -->
+    <pattern id="windowPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#ffffff" opacity="0.02"/>
+      <rect x="2" y="2" width="5" height="5" fill="#ffffff" opacity="0.06"/>
+      <rect x="9" y="2" width="5" height="5" fill="#ffffff" opacity="0.06"/>
+      <rect x="2" y="9" width="5" height="5" fill="#ffffff" opacity="0.06"/>
+      <rect x="9" y="9" width="5" height="5" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1400" height="760" fill="url(#bgGrad)"/>
+
+  <!-- large soft floating shapes for depth -->
+  <g opacity="0.9">
+    <ellipse cx="1100" cy="110" rx="340" ry="140" fill="#ecfeff" transform="rotate(-12 1100 110)"/>
+    <ellipse cx="250" cy="120" rx="240" ry="90" fill="#f3e8ff" transform="rotate(8 250 120)"/>
+  </g>
+
+  <!-- left: stylized hostel building -->
+  <g transform="translate(60,150)">
+    <!-- building base -->
+    <rect x="0" y="40" width="360" height="380" rx="20" fill="white" filter="url(#softLift)"/>
+    <!-- facade -->
+    <rect x="20" y="60" width="320" height="320" rx="12" fill="#eef6ff"/>
+    <!-- detail panel -->
+    <rect x="36" y="76" width="140" height="72" rx="8" fill="url(#cardGrad)" opacity="0.95"/>
+    <rect x="36" y="160" width="88" height="28" rx="6" fill="#fff" opacity="0.9"/>
+    <rect x="36" y="200" width="240" height="12" rx="6" fill="#f5f9ff"/>
+    <!-- windows grid using pattern -->
+    <g transform="translate(36,220)">
+      <rect width="280" height="156" rx="10" fill="#dbeafe"/>
+      <rect x="8" y="8" width="264" height="140" rx="8" fill="url(#windowPattern)" opacity="0.9"/>
+    </g>
+
+    <!-- small entrance -->
+    <rect x="180" y="276" width="80" height="100" rx="8" fill="#fff" opacity="0.96"/>
+    <rect x="200" y="290" width="40" height="64" rx="4" fill="#dbeafe"/>
+  </g>
+
+  <!-- right: dashboard card group -->
+  <g transform="translate(520,120)">
+    <!-- big glass card (dashboard) -->
+    <g filter="url(#softShadow)">
+      <rect x="0" y="0" width="560" height="330" rx="18" fill="url(#softBlue)" />
+      <rect x="0" y="0" width="560" height="330" rx="18" fill="url(#glass)" opacity="0.25"/>
+    </g>
+
+    <!-- inner content: small title -->
+    <g transform="translate(34,28)">
+      <rect x="0" y="0" width="150" height="18" rx="9" fill="#ffffff" opacity="0.95"/>
+      <rect x="170" y="0" width="300" height="18" rx="9" fill="#ffffff" opacity="0.65"/>
+    </g>
+
+    <!-- left: summary tiles -->
+    <g transform="translate(34,68)">
+      <!-- tile 1 -->
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="120" height="72" rx="10" fill="#ffffff" opacity="0.95"/>
+        <text x="14" y="28" font-size="10" fill="#475569" font-family="Inter, Arial">Total Students</text>
+        <text x="14" y="52" font-size="22" font-weight="700" fill="#0f172a" font-family="Inter, Arial">324</text>
+      </g>
+
+      <!-- tile 2 -->
+      <g transform="translate(136,0)">
+        <rect x="0" y="0" width="120" height="72" rx="10" fill="#fff" opacity="0.95"/>
+        <text x="14" y="28" font-size="10" fill="#475569" font-family="Inter, Arial">Available Rooms</text>
+        <text x="14" y="52" font-size="22" font-weight="700" fill="#0f172a" font-family="Inter, Arial">28</text>
+      </g>
+
+      <!-- tile 3 -->
+      <g transform="translate(272,0)">
+        <rect x="0" y="0" width="120" height="72" rx="10" fill="#fff" opacity="0.95"/>
+        <text x="14" y="28" font-size="10" fill="#475569" font-family="Inter, Arial">Pending Complaints</text>
+        <text x="14" y="52" font-size="22" font-weight="700" fill="#0f172a" font-family="Inter, Arial">3</text>
+      </g>
+    </g>
+
+    <!-- right: chart -->
+    <g transform="translate(340,80)">
+      <rect x="0" y="0" width="180" height="150" rx="10" fill="#fff" opacity="0.98"/>
+      <!-- miniature bar chart -->
+      <g transform="translate(18,30)">
+        <rect x="0" y="60" width="16" height="24" rx="4" fill="#e6eefc"/>
+        <rect x="30" y="46" width="16" height="38" rx="4" fill="#e6eefc"/>
+        <rect x="60" y="30" width="16" height="54" rx="4" fill="url(#chartGrad)"/>
+        <rect x="90" y="20" width="16" height="64" rx="4" fill="url(#chartGrad)"/>
+        <rect x="120" y="44" width="16" height="40" rx="4" fill="#cfe6ff"/>
+      </g>
+    </g>
+
+    <!-- bottom: rows / table mock -->
+    <g transform="translate(34,160)">
+      <rect x="0" y="0" width="492" height="132" rx="10" fill="#ffffff" opacity="0.95"/>
+      <!-- rows -->
+      <g transform="translate(12,12)" fill="#475569" font-family="Inter, Arial">
+        <text x="0" y="22" font-size="12">Ali Khan</text>
+        <text x="150" y="22" font-size="12" fill="#94a3b8">A-101</text>
+        <text x="260" y="22" font-size="12" fill="#94a3b8">$250</text>
+
+        <text x="0" y="50" font-size="12">Ayesha Malik</text>
+        <text x="150" y="50" font-size="12" fill="#94a3b8">A-102</text>
+        <text x="260" y="50" font-size="12" fill="#94a3b8">$0</text>
+
+        <text x="0" y="78" font-size="12">Bilal Ahmed</text>
+        <text x="150" y="78" font-size="12" fill="#94a3b8">B-201</text>
+        <text x="260" y="78" font-size="12" fill="#94a3b8">$125</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- foreground: two characters (simple, friendly) -->
+  <g transform="translate(420,420)">
+    <!-- character 1 -->
+    <g transform="translate(-40,0)">
+      <!-- shadow -->
+      <ellipse cx="40" cy="110" rx="42" ry="12" fill="#000" opacity="0.06"/>
+      <!-- body card -->
+      <rect x="0" y="0" width="88" height="120" rx="20" fill="#fff" opacity="0.96" filter="url(#softLift)"/>
+      <!-- head -->
+      <circle cx="44" cy="28" r="18" fill="#fff4f8"/>
+      <circle cx="44" cy="28" r="14" fill="#ffdca6"/>
+      <!-- shirt -->
+      <rect x="18" y="48" width="52" height="42" rx="8" fill="#60a5fa"/>
+      <!-- small badge -->
+      <rect x="62" y="8" width="8" height="8" rx="2" fill="#fff" opacity="0.8"/>
+    </g>
+
+    <!-- character 2 -->
+    <g transform="translate(120,6)">
+      <ellipse cx="40" cy="110" rx="42" ry="12" fill="#000" opacity="0.06"/>
+      <rect x="0" y="0" width="88" height="120" rx="20" fill="#fff" opacity="0.96" filter="url(#softLift)"/>
+      <circle cx="44" cy="28" r="18" fill="#f0fbff"/>
+      <circle cx="44" cy="28" r="14" fill="#bfe3ff"/>
+      <rect x="18" y="48" width="52" height="42" rx="8" fill="#7c3aed"/>
+      <rect x="62" y="8" width="8" height="8" rx="2" fill="#fff" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- small floating cards for accent -->
+  <g>
+    <g transform="translate(980,40)" filter="url(#softLift)">
+      <rect x="0" y="0" width="180" height="86" rx="12" fill="#fff" opacity="0.95"/>
+      <text x="14" y="30" font-size="13" fill="#0f172a" font-family="Inter, Arial">Next check-in</text>
+      <text x="14" y="56" font-size="18" font-weight="700" fill="#0f172a" font-family="Inter, Arial">Today • 2:00 PM</text>
+    </g>
+
+    <g transform="translate(980,140)" filter="url(#softLift)">
+      <rect x="0" y="0" width="120" height="86" rx="12" fill="#fff" opacity="0.95"/>
+      <text x="14" y="46" font-size="16" font-weight="700" fill="#0f172a" font-family="Inter, Arial">23 rooms</text>
+    </g>
+  </g>
+
+  <!-- tiny decorative dots -->
+  <g opacity="0.45" fill="#c7d2fe">
+    <circle cx="460" cy="64" r="3"/>
+    <circle cx="480" cy="74" r="2"/>
+    <circle cx="520" cy="58" r="2.4"/>
+    <circle cx="560" cy="72" r="2"/>
+  </g>
+</svg>

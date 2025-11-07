@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-landing',
   imports: [CommonModule, RouterModule],
-  templateUrl: './app.html',
-  styleUrls: ['./app.scss'],
+  templateUrl: './landing.html',
+  styleUrl: './landing.scss',
 })
-export class App {}
+export class Landing {
+ currentYear = new Date().getFullYear(); 
+}
